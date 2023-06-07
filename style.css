@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* Cria variáveis globais */
+:root {
+    --cor-principal: #fd4646;
+    --cor-texto: #171427;
+    --cor-fundo: #fff;
+}
+
+/* Imagens */
+img {
+    width: 100%;
+}
+
+/* Corpo */
+ body {
+    color: var(--cor-texto);
+ }
+
+/** Cabeçalho */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--cor-fundo);
+    box-shadow: 0 1px 4px hsl(0 4% 15% / 10%);
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+}
+
+.aluno {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--cor-texto);
+    font-weight: 400;
+}
+
+nav a {
+    font-size: 1.1rem;
+    text-align: center;
+    color: var(--cor-texto);
+    font-weight: 400;
+}
+/** Cabeçalho */
+
+/*! Barra de Pesquisa */
+aside {
+    margin-top: 7rem;
+    display: flex;
+    gap: .25rem;
+    justify-content: center;
+}
+
+input {
+    width: 350px;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    outline: none;
+    /* border-bottom: 1px solid black; */
+    text-align: center;
+}
+
+input::placeholder {
+    text-align: center;
+}
+/*! Barra de Pesquisa */
+
+/*? Conteúdo */
+section {
+    /* margin-top: 2rem; */
+    margin-bottom: 1.5rem;
+    padding-right: 5rem; 
+    padding-left: 5rem; 
+    padding-bottom: 3rem; 
+    box-sizing: border-box; /* Adicionado para incluir o padding no tamanho total do elemento */
+}
+
+section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    justify-items: center; /* Adicionado para centralizar os cards horizontalmente */
+    margin-left: auto; /* Adicionado para centralizar o container na página */
+    margin-right: auto; /* Adicionado para centralizar o container na página */
+    max-width: 1200px; /* Adicionado para definir uma largura máxima para o container */
+}
+
+.card-produto {
+    position: relative;
+    padding: 1rem; /* Adicionado para adicionar espaçamento interno */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column; /* Adicionado para alinhar verticalmente os elementos */
+    align-items: center;
+    justify-content: center;
+    height: 450px; /* Defina uma altura fixa para todos os cards */
+    width: 220px;
+    overflow: hidden; /* Evita que a imagem transborde o contêiner */
+}
+
+.card-produto:hover {
+    padding: 10px;
+    border: 1px solid var(--cor-fundo);
+    box-shadow: 0 5px 6px 2px rgba(0, 0, 0, 0.2), 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: 0.4s;
+}
+
+.card-produto img {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 0.5rem;
+    object-fit: fill; /* Adicionado para ajustar a imagem dentro do espaço quadrático */
+    object-position: center; /* Adicionado para centralizar a imagem dentro do espaço quadrático */
+}
+
+.card-produto h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    /* Corta o tamanho do texto para um máximo de 3 linhas */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-produto .preco {
+    font-weight: 500;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-top: auto; /* Adicionado para empurrar o preço para a parte inferior */
+}
+
+.card-produto button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--cor-texto);
+    color: var(--cor-fundo);
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 0.5rem; /* Adicionado espaçamento entre o parágrafo e o botão */
+}
+
+.card-produto button:hover {
+    background: hsl(249, 32%, 17%);
+}
+
+.card-produto h2,
+.card-produto p,
+.card-produto .preco {
+  margin: 0.5rem 0; /* Adicionado espaçamento vertical entre os elementos */
+}
+/*? Conteúdo */
+
+/*TODO Breakpoints / Responsividade */
+@media (max-width: 1920px) {
+    nav {
+        padding: 15px;
+    }
+    .produtos {
+        margin: 0 auto;
+        width: 90%;
+    }
+}
+@media (max-width: 450px) {
+    nav {
+        padding: 11px;
+    }
+    section h2 {
+        margin: 40px 0;
+    }
+    aside {
+        margin-top: 9rem;
+    }
+}
+@media (max-width: 265px) {
+    section h2 {
+        margin: 60px 0;
+    }
+}
+/*TODO Breakpoints / Responsividade */
