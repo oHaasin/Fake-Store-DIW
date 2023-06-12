@@ -77,7 +77,6 @@ input {
     border: 1px solid black;
     border-radius: 10px;
     outline: none;
-    /* border-bottom: 1px solid black; */
     text-align: center;
 }
 
@@ -88,12 +87,11 @@ input::placeholder {
 
 /*? Conteúdo */
 section {
-    /* margin-top: 2rem; */
     margin-bottom: 1.5rem;
     padding-right: 5rem; 
     padding-left: 5rem; 
     padding-bottom: 3rem; 
-    box-sizing: border-box; /* Adicionado para incluir o padding no tamanho total do elemento */
+    box-sizing: border-box;
 }
 
 section h2 {
@@ -107,24 +105,24 @@ section h2 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 1.5rem;
-    justify-items: center; /* Adicionado para centralizar os cards horizontalmente */
-    margin-left: auto; /* Adicionado para centralizar o container na página */
-    margin-right: auto; /* Adicionado para centralizar o container na página */
-    max-width: 1200px; /* Adicionado para definir uma largura máxima para o container */
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
 }
 
 .card-produto {
     position: relative;
-    padding: 1rem; /* Adicionado para adicionar espaçamento interno */
-    border-radius: 5px; /* Adiciona bordas arredondadas */
+    padding: 1rem;
+    border-radius: 5px;
     transition: 0.4s;
     display: flex;
-    flex-direction: column; /* Adicionado para alinhar verticalmente os elementos */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 450px; /* Defina uma altura fixa para todos os cards */
+    height: 450px;
     width: 220px;
-    overflow: hidden; /* Evita que a imagem transborde o contêiner */
+    overflow: hidden;
 }
 
 .card-produto:hover {
@@ -138,8 +136,8 @@ section h2 {
     width: 100%;
     height: 200px;
     margin-bottom: 0.5rem;
-    object-fit: fill; /* Adicionado para ajustar a imagem dentro do espaço quadrático */
-    object-position: center; /* Adicionado para centralizar a imagem dentro do espaço quadrático */
+    object-fit: fill;
+    object-position: center;
 }
 
 .card-produto h2 {
@@ -159,7 +157,7 @@ section h2 {
     position: absolute;
     bottom: 0;
     left: 0;
-    margin-top: auto; /* Adicionado para empurrar o preço para a parte inferior */
+    margin-top: auto;
 }
 
 .card-produto button {
@@ -170,7 +168,7 @@ section h2 {
     color: var(--cor-fundo);
     padding: 10px;
     cursor: pointer;
-    margin-top: 0.5rem; /* Adicionado espaçamento entre o parágrafo e o botão */
+    margin-top: 0.5rem;
 }
 
 .card-produto button:hover {
@@ -180,7 +178,7 @@ section h2 {
 .card-produto h2,
 .card-produto p,
 .card-produto .preco {
-  margin: 0.5rem 0; /* Adicionado espaçamento vertical entre os elementos */
+  margin: 0.5rem 0;
 }
 /*? Conteúdo */
 
